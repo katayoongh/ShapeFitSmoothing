@@ -3,17 +3,10 @@ Authors: Katayoon Ghaemi, Nils Schöneberg
 Last updated: 14th August 2025
 """
 
-from __future__ import print_function
 import classy
-import os
 import numpy as np
-import math
-import warnings
-import re
 import scipy.constants as const
-import scipy.integrate
 import matplotlib.pyplot as plt
-import scipy.misc
 import matplotlib as mpl
 
 from copy import deepcopy
@@ -30,8 +23,7 @@ from scipy.optimize import curve_fit, minimize
 from scipy.integrate import simpson
 from scipy.fft import fht, ifht
 from scipy.fftpack import dst, idst
-from scipy.signal import find_peaks, convolve, savgol_filter
-from scipy.ndimage import median_filter
+from scipy.signal import find_peaks, savgol_filter
 
 
 mpl.rcParams.update(mpl.rcParamsDefault)
@@ -47,7 +39,7 @@ class EHclass:
         scaling_factor: float,
         **add_args,
     ) -> np.ndarray:
-        """
+        """ EHclass.
         Computes the Eisenstein & Hu (1998) linear matter power spectrum P(k, z).
 
         Parameters
@@ -2730,12 +2722,16 @@ def generate_cosmology(pars: dict, tag: str):
     cosmos[tag] = cosmology
 
 
-# Example: Create a new cosmology tagged as "test"
-generate_cosmology({"omega_cdm": 0.11, "omega_b": 0.018}, "test")
+"""
+Example
+-------
+# Create a new cosmology tagged as "test"
+>>> generate_cosmology({"omega_cdm": 0.11, "omega_b": 0.018}, "test")
 
 # Choose which cosmological model to work with
-chosen_cosmo_key = "test"
-chosen_cosmo = cosmos[chosen_cosmo_key]
+>>> chosen_cosmo_key = "test"
+>>> chosen_cosmo = cosmos[chosen_cosmo_key]
 
 # Create a cosmology generator object using fiducial and chosen cosmology
-cog = cosmology_generator(fiducial_cosmo, chosen_cosmo)
+>>> cog = cosmology_generator(fiducial_cosmo, chosen_cosmo)
+"""

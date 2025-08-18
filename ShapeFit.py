@@ -30,6 +30,10 @@ mpl.rcParams.update(mpl.rcParamsDefault)
 
 
 class EHclass:
+    """
+    This is a general class that contains functions for computing
+    the Eisenstein & Hu matter power spectrum.
+    """
     @classmethod
     def EH98(
         self,

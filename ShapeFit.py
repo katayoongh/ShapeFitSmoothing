@@ -1256,7 +1256,7 @@ class smoother:
         logkh = np.log(kh)
 
         # 2) Define polynomial fit with weighted suppression
-        weight = (
+        weights = (
             1.0
             - alpha * np.exp(-kh * kh / (2.0 * sigmasq))
             + beta * np.exp(-0.5 * kh * kh / sigmasq_2)
@@ -2711,6 +2711,18 @@ def generate_cosmology(pars: dict, tag: str):
         Dictionary of parameters for the cosmology.
     tag : str
         Identifier for the cosmology.
+        
+    Example
+    -------
+    # Create a new cosmology tagged as "test"
+    >>> generate_cosmology({"omega_cdm": 0.11, "omega_b": 0.018}, "test")
+
+    # Choose which cosmological model to work with
+    >>> chosen_cosmo_key = "test"
+    >>> chosen_cosmo = cosmos[chosen_cosmo_key]
+
+    # Create a cosmology generator object using fiducial and chosen cosmology
+    >>> cog = cosmology_generator(fiducial_cosmo, chosen_cosmo)
     """
     # Make a copy of the fiducial cosmology to avoid modifying the original
     cosmology = fiducial_cosmo.copy()
@@ -2726,16 +2738,3 @@ def generate_cosmology(pars: dict, tag: str):
     cosmos[tag] = cosmology
 
 
-"""
-Example
--------
-# Create a new cosmology tagged as "test"
->>> generate_cosmology({"omega_cdm": 0.11, "omega_b": 0.018}, "test")
-
-# Choose which cosmological model to work with
->>> chosen_cosmo_key = "test"
->>> chosen_cosmo = cosmos[chosen_cosmo_key]
-
-# Create a cosmology generator object using fiducial and chosen cosmology
->>> cog = cosmology_generator(fiducial_cosmo, chosen_cosmo)
-"""

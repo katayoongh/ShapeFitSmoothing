@@ -17,5 +17,5 @@ documentation for details.
    :show-inheritance:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 
    :caption: Contents:

@@ -22,7 +22,8 @@ release = 'v1'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-"sphinx.ext.autodoc",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.napoleon",
     "sphinx.ext.doctest",
     "sphinx.ext.intersphinx",
     "sphinx.ext.napoleon",
@@ -41,9 +42,6 @@ intersphinx_mapping = {
 
 templates_path = ['_templates']
 exclude_patterns = []
-
-html_theme = "sphinx_book_theme"
-
 
 
 

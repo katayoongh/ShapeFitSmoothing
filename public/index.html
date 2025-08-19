@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ShapeFit documentation &#8212; ShapeFit v1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=5cb08e4e"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="shapefit-documentation">
+<h1>ShapeFit documentation<a class="headerlink" href="#shapefit-documentation" title="Link to this heading">¶</a></h1>
+<p>Add your content using <code class="docutils literal notranslate"><span class="pre">reStructuredText</span></code> syntax. See the
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">reStructuredText</a>
+documentation for details.</p>
+<p id="module-ShapeFit">Authors: Katayoon Ghaemi, Nils Schöneberg
+Last updated: 14th August 2025</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="ShapeFit.EHclass">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ShapeFit.</span></span><span class="sig-name descname"><span class="pre">EHclass</span></span><a class="reference internal" href="_modules/ShapeFit.html#EHclass"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.EHclass" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>This is a general class that contains functions for computing
+the Eisenstein &amp; Hu matter power spectrum.</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ShapeFit.EHclass.EH98" title="ShapeFit.EHclass.EH98"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EH98</span></code></a>(cosmo, kvector, redshift, ...)</p></td>
+<td><p>EHclass.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ShapeFit.EHclass.EH98_fit" title="ShapeFit.EHclass.EH98_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EH98_fit</span></code></a>(kvector, pvec)</p></td>
+<td><p>Compute a simplified parametric Eisenstein &amp; Hu power spectrum fit.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ShapeFit.EHclass.EH98_fit_modified" title="ShapeFit.EHclass.EH98_fit_modified"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EH98_fit_modified</span></code></a>(kvector, pvec)</p></td>
+<td><p>Compute a modified parametric Eisenstein &amp; Hu power spectrum fit.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.EHclass.EH98">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EH98</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cosmo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kvector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">redshift</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaling_factor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">add_args</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></span><a class="reference internal" href="_modules/ShapeFit.html#EHclass.EH98"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.EHclass.EH98" title="Link to this definition">¶</a></dt>
+<dd><p>EHclass.
+Computes the Eisenstein &amp; Hu (1998) linear matter power spectrum P(k, z).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cosmo</strong> (<em>object: classy.Class</em><em>(</em><em>)</em>) – Cosmology object providing cosmological parameters like Omega_m(), h(), etc.</p></li>
+<li><p><strong>kvector</strong> (<em>array_like: np.ndarray</em>) – Wavenumber values in h/Mpc.</p></li>
+<li><p><strong>redshift</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Redshift at which the power spectrum is evaluated.</p></li>
+<li><p><strong>scaling_factor</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Multiplicative factor applied to some scales (e.g., for unit conversions).</p></li>
+<li><p><strong>**add_args</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a>) – Additional keyword arguments.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Pk</strong> – Linear matter power spectrum at the given redshift in (Mpc/h)^3.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray: np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.EHclass.EH98_fit">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EH98_fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kvector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pvec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></span><a class="reference internal" href="_modules/ShapeFit.html#EHclass.EH98_fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.EHclass.EH98_fit" title="Link to this definition">¶</a></dt>
+<dd><p>Compute a simplified parametric Eisenstein &amp; Hu power spectrum fit.</p>
+<p>This method uses a reduced set of parameters to reproduce the EH98
+transfer function shape without requiring full cosmological calculations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kvector</strong> (<em>array_like: np.ndarray</em>) – Wavenumber values in h/Mpc.</p></li>
+<li><p><strong>pvec</strong> (<em>array_like: np.ndarray</em>) – Parameters of the power spectrum.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Pk</strong> – Power spectrum P(k) in arbitrary units (depends on pvec[5]).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray: np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.EHclass.EH98_fit_modified">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">EH98_fit_modified</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kvector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pvec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></span><a class="reference internal" href="_modules/ShapeFit.html#EHclass.EH98_fit_modified"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.EHclass.EH98_fit_modified" title="Link to this definition">¶</a></dt>
+<dd><p>Compute a modified parametric Eisenstein &amp; Hu power spectrum fit.</p>
+<p>Same as EH98_fit, but allows modification of the exponent in the
+small-scale suppression term of the transfer function, making it
+more flexible for non-standard cosmologies.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kvector</strong> (<em>array_like: np.ndarray</em>) – Wavenumber values in h/Mpc.</p></li>
+<li><p><strong>pvec</strong> (<em>array_like: np.ndarray</em>) – Parameters of the power spectrum.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Pk</strong> – Power spectrum P(k) in arbitrary units (depends on pvec[5]).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ShapeFit.Likelihood_with_EH">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ShapeFit.</span></span><span class="sig-name descname"><span class="pre">Likelihood_with_EH</span></span><a class="reference internal" href="_modules/ShapeFit.html#Likelihood_with_EH"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.Likelihood_with_EH" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>General class implementing functions for smoothing the power spectrum</p>
+<p>smoothing_method_sam : smoothing method used in the original ShapeFit approach</p>
+<dl class="simple">
+<dt>smooth_pkm:</dt><dd><p>General function for smoothing the power spectrum using a given method.</p>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ShapeFit.Likelihood_with_EH.smooth_pkm" title="ShapeFit.Likelihood_with_EH.smooth_pkm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smooth_pkm</span></code></a>(kh, pk[, krepstart, krepend, ...])</p></td>
+<td><p>High-level smoothing function for the power spectrum P(k).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ShapeFit.Likelihood_with_EH.smoothing_method_sam" title="ShapeFit.Likelihood_with_EH.smoothing_method_sam"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smoothing_method_sam</span></code></a>(kh, pk, k_start[, ...])</p></td>
+<td><p>Method for smoothing the power spectrum based on ArXiv paper 2204.11868 The smoothing can be done both in the linear and log domain</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.Likelihood_with_EH.smooth_pkm">
+<span class="sig-name descname"><span class="pre">smooth_pkm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">krepstart</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.005</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krepend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krepwidth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kstart</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.02</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_reduction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'log'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpkind</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'quadratic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'sam'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bao_idx_range</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[120,</span> <span class="pre">240]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_bounds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[50,</span> <span class="pre">500]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rep_bounds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[120,</span> <span class="pre">240]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_even</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_odd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doplot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></span><a class="reference internal" href="_modules/ShapeFit.html#Likelihood_with_EH.smooth_pkm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.Likelihood_with_EH.smooth_pkm" title="Link to this definition">¶</a></dt>
+<dd><p>High-level smoothing function for the power spectrum P(k).
+The default method is “sam”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kh</strong> (<em>np.ndarray</em>) – Wavenumbers k in units of h/Mpc.</p></li>
+<li><p><strong>pk</strong> (<em>np.ndarray</em>) – Power spectrum values P(k).</p></li>
+<li><p><strong>krepstart</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Wavenumber k range.</p></li>
+<li><p><strong>krepend</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Wavenumber k range.</p></li>
+<li><p><strong>krepwidth</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Width parameter for some spline smoothing methods.</p></li>
+<li><p><strong>kstart</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Range of wavenumbers including the BAO features.</p></li>
+<li><p><strong>kend</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Range of wavenumbers including the BAO features.</p></li>
+<li><p><strong>interpkind</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – Interpolation kind.</p></li>
+<li><p><strong>bao_idx_range</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a>) – BAO feature index range.</p></li>
+<li><p><strong>fit_bounds</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a>) – Bounds for fittingt.</p></li>
+<li><p><strong>rep_bounds</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a>) – Bounds for replacment.</p></li>
+<li><p><strong>power_even</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Parameters for smoothing_method_2004.</p></li>
+<li><p><strong>power_odd</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Parameters for smoothing_method_2004.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>pk_smooth</strong> – Smoothed power spectrum.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If the input method is not recognized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.Likelihood_with_EH.smoothing_method_sam">
+<span class="sig-name descname"><span class="pre">smoothing_method_sam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_reduction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'log'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpkind</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'quadratic'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></span><a class="reference internal" href="_modules/ShapeFit.html#Likelihood_with_EH.smoothing_method_sam"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.Likelihood_with_EH.smoothing_method_sam" title="Link to this definition">¶</a></dt>
+<dd><p>Method for smoothing the power spectrum based on ArXiv paper 2204.11868
+The smoothing can be done both in the linear and log domain</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ShapeFit.cosmology_generator">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ShapeFit.</span></span><span class="sig-name descname"><span class="pre">cosmology_generator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fiducial_cosmo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">cosmology</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">kmin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2e-05</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ShapeFit.html#cosmology_generator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.cosmology_generator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>A class for generating and analyzing cosmological power spectra
+using various smoothing and derivative estimation methods.</p>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ShapeFit.cosmology_generator.derivative_all" title="ShapeFit.cosmology_generator.derivative_all"><code class="xref py py-obj docutils literal notranslate"><span class="pre">derivative_all</span></code></a>()</p></td>
+<td><p>Compute derivatives for all combinations of smoothing, processing, and derivative methods.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ShapeFit.cosmology_generator.derivative_all_for" title="ShapeFit.cosmology_generator.derivative_all_for"><code class="xref py py-obj docutils literal notranslate"><span class="pre">derivative_all_for</span></code></a>(nowiggle_key, processing_key)</p></td>
+<td><p>Calculate derivatives for all derivative methods given a smoothing method and a post-processing filter.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ShapeFit.cosmology_generator.derivative_for_method" title="ShapeFit.cosmology_generator.derivative_for_method"><code class="xref py py-obj docutils literal notranslate"><span class="pre">derivative_for_method</span></code></a>(processing_key, ...[, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ShapeFit.cosmology_generator.derivative_single" title="ShapeFit.cosmology_generator.derivative_single"><code class="xref py py-obj docutils literal notranslate"><span class="pre">derivative_single</span></code></a>(nowiggle_key, ...)</p></td>
+<td><p>Calculate the derivative for a given combination of smoothing, processing, and derivative methods.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ShapeFit.cosmology_generator.smooth_all" title="ShapeFit.cosmology_generator.smooth_all"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smooth_all</span></code></a>()</p></td>
+<td><p>Smooth the power spectrum for all methods.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ShapeFit.cosmology_generator.smooth_and_shift" title="ShapeFit.cosmology_generator.smooth_and_shift"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smooth_and_shift</span></code></a>(key[, replace_options, ...])</p></td>
+<td><p>Smooth the power spectrum for a given method and apply a rescaling/shift.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ShapeFit.cosmology_generator.smooth_and_shift_all" title="ShapeFit.cosmology_generator.smooth_and_shift_all"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smooth_and_shift_all</span></code></a>(key)</p></td>
+<td><p>Smooth and shift the power spectrum for all methods.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ShapeFit.cosmology_generator.smooth_single" title="ShapeFit.cosmology_generator.smooth_single"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smooth_single</span></code></a>(nowiggle_key[, ...])</p></td>
+<td><p>Smooth the power spectrum for a given method.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.cosmology_generator.derivative_all">
+<span class="sig-name descname"><span class="pre">derivative_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/ShapeFit.html#cosmology_generator.derivative_all"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.cosmology_generator.derivative_all" title="Link to this definition">¶</a></dt>
+<dd><p>Compute derivatives for all combinations of smoothing, processing,
+and derivative methods.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.cosmology_generator.derivative_all_for">
+<span class="sig-name descname"><span class="pre">derivative_all_for</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nowiggle_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">processing_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace_options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/ShapeFit.html#cosmology_generator.derivative_all_for"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.cosmology_generator.derivative_all_for" title="Link to this definition">¶</a></dt>
+<dd><p>Calculate derivatives for all derivative methods given a smoothing method
+and a post-processing filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nowiggle_key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – Key identifying the smoothing method in <cite>self.arguments</cite>.</p></li>
+<li><p><strong>processing_key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – Key identifying the post-processing method in <cite>self.processing_methods</cite>.</p></li>
+<li><p><strong>replace_options</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a>) – Dictionary of options to override in the method configuration.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>mslopes</strong> (<em>np.ndarray</em>) – Array of slope values for all derivative methods.</p></li>
+<li><p><strong>y_values_h</strong> (<em>dict</em>) – Dictionary of smoothed and shifted power spectra for all methods.</p></li>
+<li><p><strong>trafxs</strong> (<em>dict</em>) – Dictionary of derivative values for all methods.</p></li>
+<li><p><strong>infos</strong> (<em>dict</em>) – Mapping from derivative method name to auxiliary output from
+<cite>slope_maker.slope_at_x</cite>.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.cosmology_generator.derivative_for_method">
+<span class="sig-name descname"><span class="pre">derivative_for_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">processing_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">only_arguments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><span class="pre">list</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/ShapeFit.html#cosmology_generator.derivative_for_method"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.cosmology_generator.derivative_for_method" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>processing_key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – Identifier for the preprocessing method in <cite>self.processing_methods</cite>.</p></li>
+<li><p><strong>derivative_key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – Identifier for the derivative method in <cite>self.derivative_methods</cite>.</p></li>
+<li><p><strong>only_arguments</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>]</em>) – Subset of smoothing method keys from <cite>self.arguments</cite> to process.
+If None (default), all smoothing methods in <cite>self.arguments</cite> are used.</p></li>
+<li><p><strong>add_info</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>, </em><em>optional</em>) – Additional options to merge into <cite>self.inputinfos[derivative_key]</cite>
+before calling <cite>slope_maker.slope_at_x</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>mslopes</strong> (<em>dict[str, float]</em>) – Mapping from smoothing method key to slope value at the pivot scale <cite>self.kmpiv</cite>.</p></li>
+<li><p><strong>y_values_h</strong> (<em>dict[str, np.ndarray]</em>) – Mapping from smoothing method key to processed ratio array.</p></li>
+<li><p><strong>trafxs</strong> (<em>dict[str, np.ndarray]</em>) – Mapping from smoothing method key to derivative array
+(d ln P / d ln k) at each k in <cite>self.ks_out</cite>.</p></li>
+<li><p><strong>infos</strong> (<em>dict[str, any]</em>) – Mapping from smoothing method key to auxiliary output from
+<cite>slope_maker.slope_at_x</cite>.</p></li>
+<li><p><strong>approxs</strong> (<em>dict[str, any]</em>) – Mapping from smoothing method key to approximation object or data
+returned by <cite>slope_maker.slope_at_x</cite> when <cite>return_approx=True</cite>.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.cosmology_generator.derivative_single">
+<span class="sig-name descname"><span class="pre">derivative_single</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nowiggle_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">processing_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivative_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/ShapeFit.html#cosmology_generator.derivative_single"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.cosmology_generator.derivative_single" title="Link to this definition">¶</a></dt>
+<dd><p>Calculate the derivative for a given combination of
+smoothing, processing, and derivative methods.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nowiggle_key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – Key identifying the smoothing method in <cite>self.arguments</cite>.</p></li>
+<li><p><strong>processing_key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – Key identifying the post-processing method in <cite>self.processing_methods</cite>.</p></li>
+<li><p><strong>derivative_key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – Key identifying the derivative method in <cite>self.derivative_methods</cite>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>trafxs</strong> (<em>np.ndarray</em>) – Derivative of the power spectrum.</p></li>
+<li><p><strong>info</strong> (<em>np.ndarray</em>) – Information about the derivative.</p></li>
+<li><p><strong>mslope</strong> (<em>np.ndarray</em>) – Slope of the derivative.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.cosmology_generator.smooth_all">
+<span class="sig-name descname"><span class="pre">smooth_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a></span></span><a class="reference internal" href="_modules/ShapeFit.html#cosmology_generator.smooth_all"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.cosmology_generator.smooth_all" title="Link to this definition">¶</a></dt>
+<dd><p>Smooth the power spectrum for all methods.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><strong>pk_smooth_all</strong> (<em>dict</em>) – Dictionary of smoothed power spectra for all methods.</p></li>
+<li><p><strong>pk_smooth_fid_all</strong> (<em>dict</em>) – Dictionary of smoothed fiducial power spectra for all methods.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.cosmology_generator.smooth_and_shift">
+<span class="sig-name descname"><span class="pre">smooth_and_shift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace_options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krepstart</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krepend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/ShapeFit.html#cosmology_generator.smooth_and_shift"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.cosmology_generator.smooth_and_shift" title="Link to this definition">¶</a></dt>
+<dd><p>Smooth the power spectrum for a given method and apply a rescaling/shift.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – Key identifying the smoothing method in <cite>self.arguments</cite>.</p></li>
+<li><p><strong>replace_options</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a>) – Dictionary of options to override in the method configuration.</p></li>
+<li><p><strong>krepstart</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Starting k-value.</p></li>
+<li><p><strong>krepend</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Ending k-value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>pk_smooth_h</strong> (<em>ndarray</em>) – Smoothed and shifted power spectrum for the target cosmology,
+in units of (h⁻³ Mpc³).</p></li>
+<li><p><strong>pk_smooth_fid_h</strong> (<em>ndarray</em>) – Smoothed and shifted power spectrum for the fiducial cosmology,
+in units of (h⁻³ Mpc³).</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.cosmology_generator.smooth_and_shift_all">
+<span class="sig-name descname"><span class="pre">smooth_and_shift_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/ShapeFit.html#cosmology_generator.smooth_and_shift_all"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.cosmology_generator.smooth_and_shift_all" title="Link to this definition">¶</a></dt>
+<dd><p>Smooth and shift the power spectrum for all methods.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – Key identifying the smoothing method in <cite>self.arguments</cite>.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>pk_smooth_all</strong> – Smoothed and shifted power spectra for all methods.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.cosmology_generator.smooth_single">
+<span class="sig-name descname"><span class="pre">smooth_single</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nowiggle_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace_options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krepstart</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krepend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/ShapeFit.html#cosmology_generator.smooth_single"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.cosmology_generator.smooth_single" title="Link to this definition">¶</a></dt>
+<dd><p>Smooth the power spectrum for a given method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nowiggle_key</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – Key for the smoothing method in self.arguments.</p></li>
+<li><p><strong>replace_options</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a>) – Dictionary of options for the method.</p></li>
+<li><p><strong>krepstart</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Starting k-value.</p></li>
+<li><p><strong>krepend</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Ending k-value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>pk_smooth</strong> (<em>np.ndarray</em>) – Smoothed power spectrum.</p></li>
+<li><p><strong>pk_smooth_fid</strong> (<em>np.ndarray</em>) – Smoothed fiducial power spectrum.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ShapeFit.generate_cosmology">
+<span class="sig-prename descclassname"><span class="pre">ShapeFit.</span></span><span class="sig-name descname"><span class="pre">generate_cosmology</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pars</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ShapeFit.html#generate_cosmology"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.generate_cosmology" title="Link to this definition">¶</a></dt>
+<dd><p>Generate a cosmology dictionary based on given parameters, update it
+with given values, and store it in the global <cite>cosmos</cite> dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pars</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a>) – Dictionary of parameters for the cosmology.</p></li>
+<li><p><strong>tag</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – Identifier for the cosmology.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ShapeFit.slope_maker">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ShapeFit.</span></span><span class="sig-name descname"><span class="pre">slope_maker</span></span><a class="reference internal" href="_modules/ShapeFit.html#slope_maker"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.slope_maker" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>This class contains different ways of post processing the power spectrum,
+and different derivative methods to compute the slope.</p>
+<dl class="simple">
+<dt>Methods in this class:</dt><dd><ul class="simple">
+<li><p>smooth_ratio: Smooth a the power spectra ratio as a function of wavenumbers, k using the selected method.</p></li>
+<li><p>slope_at_x: Compute the slope (derivative) of the ratio using a variety of numerical and analytical methods.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ShapeFit.slope_maker.slope_at_x" title="ShapeFit.slope_maker.slope_at_x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slope_at_x</span></code></a>(xvector, yvector[, derivmethod, ...])</p></td>
+<td><p>Compute the slope (derivative) of y(x) using a variety of numerical and analytical methods.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ShapeFit.slope_maker.smooth_ratio" title="ShapeFit.slope_maker.smooth_ratio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smooth_ratio</span></code></a>(xvector, yvector[, smoothmethod])</p></td>
+<td><p>Smooth a the power spectra ratio as a function of wavenumbers, k using the selected method.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.slope_maker.slope_at_x">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">slope_at_x</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xvector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">yvector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">derivmethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'sam'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smoothmethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'none'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inputinfo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_approx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></span><a class="reference internal" href="_modules/ShapeFit.html#slope_maker.slope_at_x"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.slope_maker.slope_at_x" title="Link to this definition">¶</a></dt>
+<dd><p>Compute the slope (derivative) of y(x) using a variety of numerical and analytical methods.</p>
+<p>Optionally applies smoothing before computing the derivative.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xvector</strong> (<em>array_like: np.ndarray</em>) – ln(k) or k values</p></li>
+<li><p><strong>yvector</strong> (<em>array_like: np.ndarray</em>) – ln(P(k)) or P(k) values</p></li>
+<li><p><strong>derivmethod</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>optional</em>) – <dl class="simple">
+<dt>Method for computing the derivative. One of:</dt><dd><dl class="simple">
+<dt>”sam” :</dt><dd><p>Fit a cubic B-spline (k=5, s=3) to all data, take its derivative.</p>
+</dd>
+<dt>”sam_res” :</dt><dd><p>Same as “sam”, but fit only within a restricted log(k) range from <cite>inputinfo</cite>.</p>
+</dd>
+<dt>”gradient” :</dt><dd><p>Use NumPy’s <cite>np.gradient</cite> to compute finite differences.</p>
+</dd>
+<dt>”poly” :</dt><dd><p>Fit a polynomial (default deg=2) within log(k) range from <cite>inputinfo</cite>, then take its derivative.</p>
+</dd>
+<dt>”steps” :</dt><dd><p>Compute slope between two given x-values in <cite>inputinfo[“xvals”]</cite> and return constant slope.</p>
+</dd>
+<dt>”tanh” :</dt><dd><p>Fit an exponential-tanh function with fixed <cite>a</cite> and <cite>kpiv</cite> from <cite>inputinfo</cite>,
+return derivative divided by function value.</p>
+</dd>
+<dt>”tanh_fit” :</dt><dd><p>Similar to “tanh”, but <cite>a</cite> and <cite>kpiv</cite> are also fitted, within bounds.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>smoothmethod</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>optional</em>) – Smoothing method to apply before derivative calculation.
+Passed to <cite>self.smooth_ratio()</cite> (e.g., “none”, “mean”, “savitzky”).</p></li>
+<li><p><strong>inputinfo</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><em>dict</em></a><em>, </em><em>optional</em>) – <dl class="simple">
+<dt>Additional parameters needed for some derivative methods:</dt><dd><ul>
+<li><p>kmin, kmax : bounds for restricted fits (“sam_res”, “poly”)</p></li>
+<li><p>degree : polynomial degree for “poly”</p></li>
+<li><p>xvals : [xlow, xhigh] for “steps”</p></li>
+<li><p>a, kpiv : parameters for “tanh”</p></li>
+</ul>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>return_approx</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a><em>, </em><em>optional</em>) – If True, also return the smoothed/approximated y(x) used for the derivative.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>diff</strong> (<em>ndarray: np.ndarray</em>) – Derivative dlnP(k)/dlnk.</p></li>
+<li><p><strong>approx</strong> (<em>ndarray, optional</em>) – Only returned if <cite>return_approx=True</cite>. The approximated y(x) used for derivative.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.13)"><strong>Exception</strong></a> – If <cite>derivmethod</cite> is not recognized.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.slope_maker.smooth_ratio">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">smooth_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xvector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">yvector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">smoothmethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'none'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></span><a class="reference internal" href="_modules/ShapeFit.html#slope_maker.smooth_ratio"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.slope_maker.smooth_ratio" title="Link to this definition">¶</a></dt>
+<dd><p>Smooth a the power spectra ratio as a function of wavenumbers, k using the selected method.</p>
+<p>Supported smoothing methods:
+- “none” : no smoothing, returns yvector unchanged
+- “mean” : Moving average smoothing over a fixed logarithmic window (~1.3 decades).</p>
+<blockquote>
+<div><p>Window size is determined relative to the log-scale extent of <cite>xvector</cite>.
+Boundary regions are handled with progressively smaller windows.</p>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>“savitzky” :</dt><dd><p>Savitzky–Golay smoothing (polynomial least-squares fit in a moving window).
+Fits a polynomial of fixed order (default polyorder=3) over an odd-sized window.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>For the “mean” method:
+- Defines a smoothing window size based on a fixed <cite>decade</cite> scale (1.3 decades in log-space)
+- Applies an averaging filter with special handling for boundaries</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xvector</strong> (<em>array_like: np.ndarray</em>) – k-values in h/Mpc</p></li>
+<li><p><strong>yvector</strong> (<em>array_like: np.ndarray</em>) – Power spectrum ratio</p></li>
+<li><p><strong>smoothmethod</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>, </em><em>optional</em>) – Smoothing method to apply. One of {“none”, “mean”, “savitzky”}.
+Default is “none”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>smoothed</strong> – Smoothed power spectrum values, same shape as input.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray: np.ndarray</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.13)"><strong>Exception</strong></a> – If an unrecognized smoothing method name is provided.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ShapeFit.smoother">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ShapeFit.</span></span><span class="sig-name descname"><span class="pre">smoother</span></span><a class="reference internal" href="_modules/ShapeFit.html#smoother"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.smoother" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>This class contains different smoothing algorithms for the power spectrum.
+The existing algorithms:</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>Numerical smoothing:</dt><dd><p>– smoothing_method_1509_1: Gaussian smoothing</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Fitting smooth functions:</dt><dd><p>– smoothing_method_1604: Polynomial fit
+– smoothing_method_1605_3 : Cubic Spline fit
+– smoothing_method_1509_2 : B-Spline fit
+– smoothing_method_1509_3 : Multiple B-Spline fit
+– smoothing_method_univariate : Univariate Spline fit
+– smoothing_method_1605_1 : EH fit
+– smoothing_method_1605_2 : EH fit; second version
+– smoothing_method_0907 : Cubic Spline fit</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Inflections:</dt><dd><p>– MP, MP_v2 : Cubic inflections</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Correlation function peak removal:</dt><dd><p>– smoothing_method_1301 : Hanckel transform
+– smoothing_method_2004 : Fast sine transform</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ShapeFit.smoother.MP" title="ShapeFit.smoother.MP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MP</span></code></a>(k_in, pk_in[, k_ref])</p></td>
+<td><p>Smoothing method based on ArXive paper 1210.7183, 1804.07261.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ShapeFit.smoother.MP_v2" title="ShapeFit.smoother.MP_v2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MP_v2</span></code></a>(k_in, pk_in[, k_ref, factor_left])</p></td>
+<td><p>Smoothing method based on ArXive paper 1210.7183, 1804.07261</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ShapeFit.smoother.smoothing_method_0907" title="ShapeFit.smoother.smoothing_method_0907"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smoothing_method_0907</span></code></a>(kh, pk[, bao_left, ...])</p></td>
+<td><p>Third smoothing method based on ArXiv paper 0907.1659</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ShapeFit.smoother.smoothing_method_1301" title="ShapeFit.smoother.smoothing_method_1301"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smoothing_method_1301</span></code></a>(ks, pks[, krepstart, ...])</p></td>
+<td><p>Smoothing method based on ArXiv paper 1301.3456</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ShapeFit.smoother.smoothing_method_1509_1" title="ShapeFit.smoother.smoothing_method_1509_1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smoothing_method_1509_1</span></code></a>(logkh, pk_red, kh, ...)</p></td>
+<td><p>Smoothing method based on ArXiv paper 1509.02120</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ShapeFit.smoother.smoothing_method_1509_2" title="ShapeFit.smoother.smoothing_method_1509_2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smoothing_method_1509_2</span></code></a>(logkh, pk_red, kh, ...)</p></td>
+<td><p>Smoothing method based on ArXiv paper 1509.02120</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ShapeFit.smoother.smoothing_method_1509_3" title="ShapeFit.smoother.smoothing_method_1509_3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smoothing_method_1509_3</span></code></a>(logkh, pk_red, kh, ...)</p></td>
+<td><p>Smoothing method based on ArXiv paper 1509.02120</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ShapeFit.smoother.smoothing_method_1604" title="ShapeFit.smoother.smoothing_method_1604"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smoothing_method_1604</span></code></a>(kh, pk_red[, sigmasq, ...])</p></td>
+<td><p>Smoothing method based on ArXiv paper 1604.01830</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ShapeFit.smoother.smoothing_method_1605_1" title="ShapeFit.smoother.smoothing_method_1605_1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smoothing_method_1605_1</span></code></a>(logkh, pk_red, kh, ...)</p></td>
+<td><p>First smoothing method based on ArXiv paper 1605.02149</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ShapeFit.smoother.smoothing_method_1605_2" title="ShapeFit.smoother.smoothing_method_1605_2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smoothing_method_1605_2</span></code></a>(kh, pk)</p></td>
+<td><p>Second smoothing method based on ArXiv paper 1605.02149</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ShapeFit.smoother.smoothing_method_1605_3" title="ShapeFit.smoother.smoothing_method_1605_3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smoothing_method_1605_3</span></code></a>(kh, pk[, bao_left, ...])</p></td>
+<td><p>Third smoothing method based on ArXiv paper 1605.02149</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#ShapeFit.smoother.smoothing_method_2004" title="ShapeFit.smoother.smoothing_method_2004"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smoothing_method_2004</span></code></a>(kh, pk, bao_idx_range, ...)</p></td>
+<td><p>Smoothing method based on ArXiv paper 2004.10607 The smoothing is done using a fast sine transform.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#ShapeFit.smoother.smoothing_method_univariate" title="ShapeFit.smoother.smoothing_method_univariate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smoothing_method_univariate</span></code></a>(ks, pks[, s, ...])</p></td>
+<td><p>Smooths a power spectrum using a Univariate Spline approach.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.smoother.MP">
+<span class="sig-name descname"><span class="pre">MP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k_in</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk_in</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">array([0.0022,</span> <span class="pre">0.45])</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></span><a class="reference internal" href="_modules/ShapeFit.html#smoother.MP"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.smoother.MP" title="Link to this definition">¶</a></dt>
+<dd><p>Smoothing method based on ArXive paper 1210.7183, 1804.07261.</p>
+<p>Function computing the analytical solution for smoothing the power spectrum</p>
+<section id="parameters">
+<h2>Parameters:<a class="headerlink" href="#parameters" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt>k_in: np.ndarray:</dt><dd><p>set of wave numbers corresponding to the values of our power spectrum</p>
+</dd>
+<dt>pk_in: np.ndarray:</dt><dd><p>input power spectrum to be smoothed</p>
+</dd>
+<dt>k_ref<span class="classifier">np.ndarray:</span></dt><dd><p>wave numbers corresponding to the BAO features</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pk_smoothed</strong> – smoothed power spectrum</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>np.ndarray:</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.smoother.MP_v2">
+<span class="sig-name descname"><span class="pre">MP_v2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k_in</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk_in</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[0.008,</span> <span class="pre">0.4]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor_left</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></span><a class="reference internal" href="_modules/ShapeFit.html#smoother.MP_v2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.smoother.MP_v2" title="Link to this definition">¶</a></dt>
+<dd><p>Smoothing method based on ArXive paper 1210.7183, 1804.07261</p>
+<section id="id1">
+<h2>Parameters:<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt>k_in: np.ndarray:</dt><dd><p>set of wave numbers corresponding to the values of our power spectrum</p>
+</dd>
+<dt>pk_in: np.ndarray:</dt><dd><p>input power spectrum to be smoothed</p>
+</dd>
+<dt>k_ref<span class="classifier">np.ndarray:</span></dt><dd><p>wave numbers corresponding to the BAO features</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pk_nobao</strong> – smoothed power spectrum</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>np.ndarray:</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.smoother.smoothing_method_0907">
+<span class="sig-name descname"><span class="pre">smoothing_method_0907</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">bao_left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bao_right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.8</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></span><a class="reference internal" href="_modules/ShapeFit.html#smoother.smoothing_method_0907"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.smoother.smoothing_method_0907" title="Link to this definition">¶</a></dt>
+<dd><p>Third smoothing method based on ArXiv paper 0907.1659</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kh</strong> (<em>np.ndarray</em>) – Wavenumbers k in units of h/Mpc.</p></li>
+<li><p><strong>pk</strong> (<em>np.ndarray</em>) – Power spectrum values P(k).</p></li>
+<li><p><strong>bao_left</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Left limit of BAO features.</p></li>
+<li><p><strong>bao_right</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Right limit of BAO features.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>pk_smooth</strong> – Smoothed power spectrum.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.smoother.smoothing_method_1301">
+<span class="sig-name descname"><span class="pre">smoothing_method_1301</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">krepstart</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krepwidth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rfitlow</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rlow</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">86</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rhigh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">150</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rfithigh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">190</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></span><a class="reference internal" href="_modules/ShapeFit.html#smoother.smoothing_method_1301"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.smoother.smoothing_method_1301" title="Link to this definition">¶</a></dt>
+<dd><p>Smoothing method based on ArXiv paper 1301.3456</p>
+<section id="id2">
+<h2>Parameters:<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt>ks: np.ndarray:</dt><dd><p>set of wave numbers, k corresponding to the values of our power spectrum.</p>
+</dd>
+<dt>pks: np.ndarray:</dt><dd><p>input power spectrum P(k) to be smoothed.</p>
+</dd>
+<dt>k_repstart<span class="classifier">float</span></dt><dd><p>wavenumber where the replacement function starts to take effect.</p>
+</dd>
+<dt>krepwidth<span class="classifier">float</span></dt><dd><p>transition width (in log-space) for smoothly blending smoothed and original spectra.</p>
+</dd>
+<dt>rfitlow<span class="classifier">float</span></dt><dd><p>lower bound in configuration space for the fit region.</p>
+</dd>
+<dt>rlow<span class="classifier">float</span></dt><dd><p>lower bound for the range of r where the correlation function will be replaced.</p>
+</dd>
+<dt>rhigh<span class="classifier">float</span></dt><dd><p>upper bound for the range of r where the correlation function will be replaced.</p>
+</dd>
+<dt>rfithigh<span class="classifier">float</span></dt><dd><p>upper bound in configuration space for the fit region.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>smooth_pk</strong> – smoothed no-wiggle power spectrum</p>
+</dd>
+<dt class="field-even">rtype<span class="colon">:</span></dt>
+<dd class="field-even"><p>np.ndarray:</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.smoother.smoothing_method_1509_1">
+<span class="sig-name descname"><span class="pre">smoothing_method_1509_1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logkh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk_red</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">kh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">kstart</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">kend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">krepstart</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.005</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krepend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krepwidth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambdav</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.25</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></span><a class="reference internal" href="_modules/ShapeFit.html#smoother.smoothing_method_1509_1"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.smoother.smoothing_method_1509_1" title="Link to this definition">¶</a></dt>
+<dd><p>Smoothing method based on ArXiv paper 1509.02120</p>
+<p>Smooths a reduced power spectrum using 1D Gaussian filtering in log(k) space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>logkh</strong> (<em>np.ndarray</em>) – Array of log(wavenumbers) corresponding to the power spectrum values.</p></li>
+<li><p><strong>pk_red</strong> (<em>np.ndarray</em>) – Reduced power spectrum values P(k) to be smoothed.</p></li>
+<li><p><strong>kh</strong> (<em>np.ndarray</em>) – Array of wavenumbers (1/Mpc) corresponding to the power spectrum values.</p></li>
+<li><p><strong>kstart</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Lower bound of wavenumber range to smooth.</p></li>
+<li><p><strong>kend</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Upper bound of wavenumber range to smooth.</p></li>
+<li><p><strong>krepstart</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Wavenumber where blending from original to smoothed spectrum begins.</p></li>
+<li><p><strong>krepend</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Wavenumber where blending back to original ends.</p></li>
+<li><p><strong>krepwidth</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Width (in log-space) of the blending transition.</p></li>
+<li><p><strong>lambdav</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Width of the Gaussian filter.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>pk_smooth</strong> – Smoothed power spectrum.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.smoother.smoothing_method_1509_2">
+<span class="sig-name descname"><span class="pre">smoothing_method_1509_2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logkh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk_red</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">kh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">kstart</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">kend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">krepwidth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degree</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></span><a class="reference internal" href="_modules/ShapeFit.html#smoother.smoothing_method_1509_2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.smoother.smoothing_method_1509_2" title="Link to this definition">¶</a></dt>
+<dd><p>Smoothing method based on ArXiv paper 1509.02120</p>
+<p>Smooths a reduced power spectrum using a B-spline fitting method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>logkh</strong> (<em>np.ndarray</em>) – Logarithmic values of wavenumber.</p></li>
+<li><p><strong>pk_red</strong> (<em>np.ndarray</em>) – Power spectrum values.</p></li>
+<li><p><strong>kh</strong> (<em>np.ndarray</em>) – Linear k*h values corresponding to <cite>logkh</cite>.</p></li>
+<li><p><strong>kstart</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Lower bound of k-range to fit and smooth.</p></li>
+<li><p><strong>kend</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Upper bound of k-range to fit and smooth.</p></li>
+<li><p><strong>krepwidth</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Width (in log-space) of the blending transition between smoothed and original.</p></li>
+<li><p><strong>degree</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – Degree of the B-spline used for fitting.</p></li>
+<li><p><strong>n</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – Number of knots for the B-spline.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>pk_smooth</strong> – Smoothed power spectrum.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.smoother.smoothing_method_1509_3">
+<span class="sig-name descname"><span class="pre">smoothing_method_1509_3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logkh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk_red</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">kh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">kstart</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">kend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">krepwidth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.4</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></span><a class="reference internal" href="_modules/ShapeFit.html#smoother.smoothing_method_1509_3"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.smoother.smoothing_method_1509_3" title="Link to this definition">¶</a></dt>
+<dd><p>Smoothing method based on ArXiv paper 1509.02120</p>
+<p>Smooths a reduced power spectrum by averaging multiple B-spline fits
+with different degrees and knot counts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>logkh</strong> (<em>np.ndarray</em>) – Logarithmic values of wavenumber k.</p></li>
+<li><p><strong>pk_red</strong> (<em>np.ndarray</em>) – Power spectrum values.</p></li>
+<li><p><strong>kh</strong> (<em>np.ndarray</em>) – Linear k values corresponding to <cite>logkh</cite>.</p></li>
+<li><p><strong>kstart</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Lower bound of k-range for smoothing.</p></li>
+<li><p><strong>kend</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Upper bound of k-range for smoothing.</p></li>
+<li><p><strong>krepwidth</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>, </em><em>optional</em>) – Width (in log-space) of the transition between smoothed and original spectra.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>pk_smooth</strong> – Smoothed power spectrum.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.smoother.smoothing_method_1604">
+<span class="sig-name descname"><span class="pre">smoothing_method_1604</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk_red</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigmasq</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigmasq_2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.005</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">13</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></span><a class="reference internal" href="_modules/ShapeFit.html#smoother.smoothing_method_1604"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.smoother.smoothing_method_1604" title="Link to this definition">¶</a></dt>
+<dd><p>Smoothing method based on ArXiv paper 1604.01830</p>
+<p>Smooths a reduced power spectrum using a weighted polynomial fit in log(k) space</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kh</strong> (<em>np.ndarray</em>) – Array of wavenumber k values.</p></li>
+<li><p><strong>pk_red</strong> (<em>np.ndarray</em>) – Power spectrum values.</p></li>
+<li><p><strong>sigmasq</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Variance of the first Gaussian weight suppression term.</p></li>
+<li><p><strong>sigmasq_2</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Variance of the second Gaussian weight adjustment term.</p></li>
+<li><p><strong>alpha</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Amplitude of the first Gaussian suppression term.</p></li>
+<li><p><strong>beta</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Amplitude of the second Gaussian adjustment term.</p></li>
+<li><p><strong>n</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – Degree of the polynomial fit.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>pk_smooth</strong> – Smoothed power spectrum.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.smoother.smoothing_method_1605_1">
+<span class="sig-name descname"><span class="pre">smoothing_method_1605_1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logkh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk_red</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">kh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">kstart</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">kend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">krepstart</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krepend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krepwidth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.4</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></span><a class="reference internal" href="_modules/ShapeFit.html#smoother.smoothing_method_1605_1"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.smoother.smoothing_method_1605_1" title="Link to this definition">¶</a></dt>
+<dd><p>First smoothing method based on ArXiv paper 1605.02149</p>
+<p>This approach fits the analytical Eisenstein &amp; Hu 1998 (EH98) model
+to the power spectrum in a chosen k-range, then replaces the BAO
+wiggle region with the model prediction, blending smoothly between
+model and data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>logkh</strong> (<em>np.ndarray</em>) – log(k) values.</p></li>
+<li><p><strong>pk_red</strong> (<em>np.ndarray</em>) – Power spectrum values.</p></li>
+<li><p><strong>kh</strong> (<em>np.ndarray</em>) – k values.</p></li>
+<li><p><strong>pk</strong> (<em>np.ndarray</em>) – Power spectrum.</p></li>
+<li><p><strong>kstart</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Fitting range for the EH98 model.</p></li>
+<li><p><strong>kend</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Fitting range for the EH98 model.</p></li>
+<li><p><strong>krepstart</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Replacement range for blending model and data.</p></li>
+<li><p><strong>krepend</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Replacement range for blending model and data.</p></li>
+<li><p><strong>krepwidth</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Width of the tanh activation transition.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>pk_smooth</strong> – Smoothed reduced power spectrum.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.smoother.smoothing_method_1605_2">
+<span class="sig-name descname"><span class="pre">smoothing_method_1605_2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></span><a class="reference internal" href="_modules/ShapeFit.html#smoother.smoothing_method_1605_2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.smoother.smoothing_method_1605_2" title="Link to this definition">¶</a></dt>
+<dd><p>Second smoothing method based on ArXiv paper 1605.02149</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kh</strong> (<em>np.ndarray</em>) – Wavenumbers k in units of h/Mpc.</p></li>
+<li><p><strong>pk</strong> (<em>np.ndarray</em>) – Power spectrum values P(k).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>pk_smooth</strong> – Smoothed power spectrum P(k).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.smoother.smoothing_method_1605_3">
+<span class="sig-name descname"><span class="pre">smoothing_method_1605_3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">bao_left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bao_right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_count_wanted</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kpiv</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.03</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></span><a class="reference internal" href="_modules/ShapeFit.html#smoother.smoothing_method_1605_3"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.smoother.smoothing_method_1605_3" title="Link to this definition">¶</a></dt>
+<dd><p>Third smoothing method based on ArXiv paper 1605.02149</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kh</strong> (<em>np.ndarray</em>) – Wavenumbers k in units of h/Mpc.</p></li>
+<li><p><strong>pk</strong> (<em>np.ndarray</em>) – Power spectrum values P(k).</p></li>
+<li><p><strong>bao_left</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Left limit of BAO features.</p></li>
+<li><p><strong>bao_right</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Right limit of BAO features.</p></li>
+<li><p><strong>n_count_wanted</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a>) – Number of sampling points used for smoothing.</p></li>
+<li><p><strong>kpiv</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Pivot scale.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>pk_smooth</strong> – Smoothed power spectrum (log-space values).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.smoother.smoothing_method_2004">
+<span class="sig-name descname"><span class="pre">smoothing_method_2004</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pk</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">bao_idx_range</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_bounds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">rep_bounds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><span class="pre">tuple</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_even</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_odd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">doplot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">kmin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kmethod</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">7e-05</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></span><a class="reference internal" href="_modules/ShapeFit.html#smoother.smoothing_method_2004"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.smoother.smoothing_method_2004" title="Link to this definition">¶</a></dt>
+<dd><p>Smoothing method based on ArXiv paper 2004.10607
+The smoothing is done using a fast sine transform.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kh</strong> (<em>np.ndarray</em>) – Wavenumbers k in units of h/Mpc.</p></li>
+<li><p><strong>pk</strong> (<em>np.ndarray</em>) – Power spectrum values P(k).</p></li>
+<li><p><strong>bao_idx_range</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><em>tuple</em></a>) – Index range corresponding to BAO features.</p></li>
+<li><p><strong>fit_bounds</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><em>tuple</em></a>) – Index bounds outside the BAO region used for fitting.</p></li>
+<li><p><strong>rep_bounds</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><em>tuple</em></a>) – Index bounds for which the DST components are replaced by fitted values.</p></li>
+<li><p><strong>power_even</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Power used to scale even-indexed DST components before fitting.</p></li>
+<li><p><strong>power_odd</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Power used to scale odd-indexed DST components before fitting.</p></li>
+<li><p><strong>doplot</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><em>bool</em></a>) – Whether to plot intermediate DST components for debugging.</p></li>
+<li><p><strong>kmin</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Minimum wavenumber to include in final smoothed spectrum.</p></li>
+<li><p><strong>kmethod</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Starting wavenumber for DST interpolation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>pk_smooth</strong> – Smoothed power spectrum.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ShapeFit.smoother.smoothing_method_univariate">
+<span class="sig-name descname"><span class="pre">smoothing_method_univariate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krepstart</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.005</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krepend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krepwidth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kfitlow</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kfithigh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w_suppression</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a></span></span><a class="reference internal" href="_modules/ShapeFit.html#smoother.smoothing_method_univariate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ShapeFit.smoother.smoothing_method_univariate" title="Link to this definition">¶</a></dt>
+<dd><p>Smooths a power spectrum using a Univariate Spline approach.</p>
+<p>The method fits a spline to the log-log representation of the power spectrum,
+optionally reducing the spline’s weight in a specific k-range to
+avoid overfitting oscillatory features. The result is smoothly blended with
+the original spectrum in selected k-ranges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ks</strong> (<em>np.ndarray</em>) – Array of wavenumbers (1/Mpc) corresponding to the power spectrum values.</p></li>
+<li><p><strong>pks</strong> (<em>np.ndarray</em>) – Power spectrum values P(k) to be smoothed.</p></li>
+<li><p><strong>s</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Smoothing factor for the Univariate Spline. Smaller values fit more closely.</p></li>
+<li><p><strong>krepstart</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Wavenumber where blending from original to smoothed spectrum begins.</p></li>
+<li><p><strong>krepend</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Wavenumber where blending back to original ends.</p></li>
+<li><p><strong>krepwidth</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Width (in log-space) of the blending transition.</p></li>
+<li><p><strong>kfitlow</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Lower bound of k-range where spline fit weights are suppressed.</p></li>
+<li><p><strong>kfithigh</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Upper bound of k-range where spline fit weights are suppressed.</p></li>
+<li><p><strong>w_suppression</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Multiplicative factor for weight suppression in the fit range.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>pk_smooth</strong> – Smoothed power spectrum.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">ShapeFit</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Katayoon Ghaemi, Nils Schöneberg.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

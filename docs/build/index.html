@@ -408,6 +408,14 @@ with given values, and store it in the global <cite>cosmos</cite> dictionary.</p
 </ul>
 </dd>
 </dl>
+<p class="rubric">Example</p>
+<p># Create a new cosmology tagged as “test”
+&gt;&gt;&gt; generate_cosmology({“omega_cdm”: 0.11, “omega_b”: 0.018}, “test”)</p>
+<p># Choose which cosmological model to work with
+&gt;&gt;&gt; chosen_cosmo_key = “test”
+&gt;&gt;&gt; chosen_cosmo = cosmos[chosen_cosmo_key]</p>
+<p># Create a cosmology generator object using fiducial and chosen cosmology
+&gt;&gt;&gt; cog = cosmology_generator(fiducial_cosmo, chosen_cosmo)</p>
 </dd></dl>
 
 <dl class="py class">

@@ -3,7 +3,7 @@
 Authors: Katayoon Ghaemi, Nils Schoeneberg
 
 This repository provides a code with necessary tools for analyzing the matter power spectrum of the large scale structures of the universe using ShapeFit.
-ShapeFit was introduced by Samuel Brieden in https://arxiv.org/pdf/2106.07641.
+ShapeFit is part of the PhD thesis work of Samuel Brieden at Institute of Cosmos Sciences (ICCUB). You can read about it in details here: https://arxiv.org/pdf/2106.07641.
 
 
 This work includes thirteen different smoothing algorithms implemented from the literature, and eleven different derivative methods for calculating the ShapeFit parameter, m,
